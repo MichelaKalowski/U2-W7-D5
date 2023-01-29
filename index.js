@@ -50,7 +50,7 @@ const asyncFavSong = async function (song) {
                     <img src="${element.album.cover_big}"class="img-fluid rounded-start" alt="...">
                   </div>
                   <div class="col-md-8">
-                    <div class="card-body">}
+                    <div class="card-body">
                       <h5 class="card-title">${element.title}</h5>
                       <p class="card-text">Album:${element.album.title}<br>Artista: ${element.artist.name}</p>
                       <audio controls>
@@ -90,17 +90,12 @@ const asyncCarousel = async function (song) {
 }
 
 asyncCarousel("https://striveschool-api.herokuapp.com/api/deezer/search?q=theDarkSideOfTheMoon");
-asyncCarousel("https://striveschool-api.herokuapp.com/api/deezer/search?q=empire");
+asyncCarousel("https://striveschool-api.herokuapp.com/api/deezer/search?q=kasabian");
 asyncCarousel("https://striveschool-api.herokuapp.com/api/deezer/search?q=theResistance");
 
 function stampaRank(){
   rankSong.sort((a,b)=> {return a.rank-b.rank});
   alert(rankSong.map(element=>element.rank+" - "+element.title+"\n"));
 
-  let x="";
-  for(let i=0; i<rankSong.length; i++){
-    x+=rankSong[i].rank+" - "+rankSong[i].title+"\n";
-  }
-  alert(x);
-
+ 
   }
