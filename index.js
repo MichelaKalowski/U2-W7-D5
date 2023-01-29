@@ -99,3 +99,13 @@ function stampaRank(){
 
  
   }
+  function stampaModale(){
+    
+    let modale=document.getElementById("modale");
+    modale.innerHTML="<ul>";
+    for(let i=0;i<rankSong.length;i++){
+      modale.innerHTML+= `<li>${rankSong[i].album.title} - ${rankSong[i].title}</li> `;
+    }
+    modale.innerHTML+="</ul>";
+   
+    }
